@@ -103,7 +103,9 @@ enum {
 
 struct swupdate_global_cfg {
 	int verbose;
+#ifdef CONFIG_UBIATTACH
 	char mtdblacklist[SWUPDATE_GENERAL_STRING_SIZE];
+#endif
 	int loglevel;
 	int syslog_enabled;
 	int dry_run;
